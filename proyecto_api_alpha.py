@@ -1,12 +1,11 @@
 # -*- coding: utf-8 -*-
 
 
-!pip install --upgrade pandas
 
-#Instalo librerias
-!pip install requests
-!pip install alphacast
 
+
+import seaborn as sns
+import matplotlib.pyplot as plt
 from alphacast import Alphacast
 import pandas as pd
 import io
@@ -112,8 +111,7 @@ df_filtrado
 
 df_comb['Date'] = pd.to_datetime(df_comb['Date'])
 
-import seaborn as sns
-import matplotlib.pyplot as plt
+
 
 sns.set_style("darkgrid")
 
@@ -202,22 +200,8 @@ axes[2].set_title('Riesgo pais por mandato')
 Resumen = df_comb.groupby('Presidente')['Brecha CCL'].agg(['mean', 'std'])
 print(Resumen)
 
-from google.colab import drive
 
-# Montar Google Drive en Colab (solo si aún no lo has hecho)
-drive.mount('/content/drive')
 
 # Supongamos que tu DataFrame se llama df
 # Puedes cargar tus datos o seguir trabajando con el DataFrame que ya tienes
 
-# Guardar el DataFrame en un archivo CSV en Google Drive
-df_comb1
-
-columnas = dfcomb.columns.tolist()
-columnas
-
-# Verificar si el objeto es un DataFrame
-if isinstance(df_em, pd.DataFrame):
-    print("Es un DataFrame")
-else:
-    print("No es un DataFrame")
