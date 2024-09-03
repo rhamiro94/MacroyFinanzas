@@ -28,7 +28,7 @@ df_em = alphacast.datasets.dataset(5293).download_data("pandas")
 #Ahora utilizamos la funcion para mergear y generar un df
 # Definir el rango temporal
 fecha_inicio = '2012-01-18'
-fecha_fin = '2024-07-24'
+fecha_fin = '2024-08-12'
 
 # Filtrar filas dentro del rango temporal para df1
 df_10y = df[(df['Date'] >= fecha_inicio) & (df['Date'] <= fecha_fin)]
